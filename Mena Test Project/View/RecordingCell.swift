@@ -9,11 +9,7 @@
 import UIKit
 
 class RecordingCell: UITableViewCell {
-	var completion: (() -> Void)?
-
-	
-	
-	@IBAction func playTrigger() {
-		completion?()
-	}
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var playButton: MDStateButton!
 }

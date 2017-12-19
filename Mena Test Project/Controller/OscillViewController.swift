@@ -11,95 +11,137 @@ import AudioKit
 import AudioKitUI
 
 class OscillViewController: UIViewController {
-	let oscillator = AKOscillator()
+    var source = AKVocalTract()
 	var mixer = AKMixer()
-	let octave = 4
+    var octave = 4
 	
 	@IBOutlet var noteButtons: [UIButton]!
-	@IBOutlet weak var recordButton: UIButton!
+	@IBOutlet weak var recordButton: MDStateButton!
 	@IBOutlet weak var tableView: UITableView!
-	
-	
-	var micMixer: AKMixer!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var octaveLabel: UILabel!
+    
 	var recorder: AKNodeRecorder!
 	var player: AKAudioPlayer!
-	var tape: AKAudioFile!
-	
-	var tapes: [AKAudioFile] {
-		return Recording.audioFiles
+	var tapeRecord: AKAudioFile!
+    var tapePlay: AKAudioFile!
+    
+	var recordings: [Recording] {
+        return Recording.all.sorted { $0.date > $1.date }
 	}
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		setupButtons()
-		mixer = AKMixer(oscillator)
-		tape = try! AKAudioFile()
-		player = try! AKAudioPlayer(file: tape)
-		
-		let mainMixer = AKMixer(player, mixer)
-		AudioKit.output = mainMixer
-		AudioKit.start()
-		
-		recorder = try! AKNodeRecorder(node: mixer, file: tape)
+		setupUI()
+		setupSound()
+    }
+    
+    func setupSound() {
+        let tempMixer = AKMixer(source)
+        tapeRecord = try! AKAudioFile()
+        tapePlay = try! AKAudioFile()
+        
+        player = try! AKAudioPlayer(file: tapePlay)
+        mixer = AKMixer(player, tempMixer)
+        recorder = try! AKNodeRecorder(node: mixer, file: tapeRecord)
+        
+        AudioKit.output = mixer
+        AudioKit.start()
     }
 	
-	func setupButtons() {
+	func setupUI() {
 		for button in noteButtons {
 			button.layer.borderWidth = 2.0
 			button.layer.borderColor = UIColor.black.cgColor
 			button.layer.cornerRadius = button.bounds.width / 2
 			button.clipsToBounds = true
 		}
+        recordButton.layer.cornerRadius = 8.0
+        recordButton.clipsToBounds = true
+        octaveLabel.text = "\(octave)"
 	}
-
+    @IBAction func octaveChanged() {
+        octave = Int(stepper.value)
+        octaveLabel.text = "\(octave)"
+    }
+    
 	@IBAction func play(sender: UIButton) {
 		let note = MDNote(rawValue: sender.tag)!
 		
-		oscillator.frequency = note.getFrequency(for: octave)
-		oscillator.start()
+		source.frequency = note.getFrequency(for: octave)
+		source.start()
 	}
 	
 	@IBAction func stop() {
-		if oscillator.isPlaying { oscillator.stop() }
+		if source.isPlaying { source.stop() }
 	}
 
 	
 	@IBAction func record(_ sender: UIButton) {
-		if recorder.isRecording {
-			recorder.stop()
-			tape.exportAsynchronously(name: "test", baseDir: .documents, exportFormat: .caf) {
-				_, _ in
-				self.tableView.reloadData()
-			}
-		} else {
-			try! recorder.record()
+        if recorder.isRecording {
+            recordButton.activeState = .nonActive("Record Audio")
+            recorder.stop()
+            let alert = UIAlertController(title: "Saving recording", message: "Give a name for your recording", preferredStyle: .alert)
+            alert.addTextField(configurationHandler: nil)
+            
+            let ok = UIAlertAction(title: "Save", style: .default) { _ in
+                let unixTimeDate = Date().timeIntervalSince1970
+                let name = alert.textFields!.first!.text!
+                self.tapeRecord.exportAsynchronously(name: "\(unixTimeDate)@@@\(name)", baseDir: .documents, exportFormat: .caf) { file, error in
+                    guard file != nil else { return }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            recordButton.activeState = .active("Recording...")
+            try! recorder.record()
 		}
 	}
 	
-	@IBAction func playRecord() {
-		if player.isPlaying {
+    @objc func playRecord(sender: MDStateButton) {
+        player.completionHandler = { sender.activeState = .nonActive("Play") }
+        if player.isPlaying {
+            sender.activeState = .nonActive("Play")
 			player.stop()
-		} else {
-			try! player.reloadFile()
-			player.play()
-		}
+        } else {
+            sender.activeState = .active("Stop")
+            let fileName = recordings[sender.tag].fileName
+            tapePlay = try! AKAudioFile(readFileName: fileName, baseDir: .documents)
+            try! player.replace(file: tapePlay)
+            player.play()
+        }
 	}
 }
 
 extension OscillViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return tapes.count
+		return recordings.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: MDCell.recording, for: indexPath) as? RecordingCell else {
+		guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: MDCell.recording, for: indexPath) as? RecordingCell
+        else {
 			return UITableViewCell()
 		}
-		
-		tape = tapes[indexPath.row]
-		cell.completion = { self.playRecord() }
-		
+        
+        cell.playButton.tag = indexPath.row
+        cell.playButton.addTarget(self, action: #selector(playRecord(sender:)), for: .touchUpInside)
+        
+        let recording = recordings[indexPath.row]
+        
+        cell.nameLabel.text = recording.name
+        cell.dateLabel.text = MDConstant.dateFormatter.string(from: recording.date)
+
 		return cell
 	}
 }

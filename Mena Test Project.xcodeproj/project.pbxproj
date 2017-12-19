@@ -15,6 +15,8 @@
 		A53E27F41FE913BE00DCF17E /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E27F31FE913BE00DCF17E /* Recording.swift */; };
 		A5A0881D1FE8F8930028F215 /* MDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0881C1FE8F8930028F215 /* MDConstant.swift */; };
 		A5A0881F1FE8F93C0028F215 /* MDNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0881E1FE8F93C0028F215 /* MDNote.swift */; };
+		CB7DC17E1FE95286001B9F53 /* MDStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7DC17D1FE95286001B9F53 /* MDStateButton.swift */; };
+		CB7DC1801FE95365001B9F53 /* MDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7DC17F1FE95365001B9F53 /* MDColor.swift */; };
 		FC9EA432D6721048FA89724D /* Pods_Mena_Test_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1E5B4B358C6F7764D74D0B /* Pods_Mena_Test_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		A53E27F31FE913BE00DCF17E /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		A5A0881C1FE8F8930028F215 /* MDConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDConstant.swift; sourceTree = "<group>"; };
 		A5A0881E1FE8F93C0028F215 /* MDNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDNote.swift; sourceTree = "<group>"; };
+		CB7DC17D1FE95286001B9F53 /* MDStateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDStateButton.swift; sourceTree = "<group>"; };
+		CB7DC17F1FE95365001B9F53 /* MDColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			children = (
 				A53E27ED1FE90EC000DCF17E /* New.storyboard */,
 				A53E27F01FE9138400DCF17E /* RecordingCell.swift */,
+				CB7DC17D1FE95286001B9F53 /* MDStateButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A0881C1FE8F8930028F215 /* MDConstant.swift */,
+				CB7DC17F1FE95365001B9F53 /* MDColor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -259,11 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7DC1801FE95365001B9F53 /* MDColor.swift in Sources */,
 				103A5BF81FE6093A002AE5DE /* OscillViewController.swift in Sources */,
 				A53E27F41FE913BE00DCF17E /* Recording.swift in Sources */,
 				A5A0881D1FE8F8930028F215 /* MDConstant.swift in Sources */,
 				A5A0881F1FE8F93C0028F215 /* MDNote.swift in Sources */,
 				A53E27F11FE9138400DCF17E /* RecordingCell.swift in Sources */,
+				CB7DC17E1FE95286001B9F53 /* MDStateButton.swift in Sources */,
 				103A5BF61FE6093A002AE5DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,10 +392,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D226H33SCU;
+				DEVELOPMENT_TEAM = Y3W3883E2B;
 				INFOPLIST_FILE = "Mena Test Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.modacity.Mena-Test-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.modacity.Mena-Test-Project.serj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -400,10 +408,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D226H33SCU;
+				DEVELOPMENT_TEAM = Y3W3883E2B;
 				INFOPLIST_FILE = "Mena Test Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.modacity.Mena-Test-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.modacity.Mena-Test-Project.serj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

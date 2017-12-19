@@ -13,13 +13,11 @@ struct MDConstant {
 	static let a0 = 27.5 // first note in scale
 	static let c1 = 32.703195662575268
 	
-	static var numberOfRecords: Int {
-		get {
-			return UserDefaults.standard.integer(forKey: "NumberOfRecords")
-		} set {
-			UserDefaults.standard.set(newValue, forKey: "NumberOfRecords")
-		}
-	}
+    static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter
+    }
 }
 
 struct MDCell {

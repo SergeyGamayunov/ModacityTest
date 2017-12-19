@@ -12,6 +12,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Futura.ttc">
+            <string>Futura-Bold</string>
             <string>Futura-Medium</string>
         </array>
     </customFonts>
@@ -30,8 +31,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-R5-pR2">
                                         <rect key="frame" x="0.0" y="25" width="125" height="70"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="JGu-J2-x9D">
-                                                <rect key="frame" x="18.5" y="0.0" width="88" height="35"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGu-J2-x9D">
+                                                <rect key="frame" x="22.5" y="0.0" width="80" height="35"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-qF-eCG">
                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -50,7 +51,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-Vu-ULe">
-                                                        <rect key="frame" x="53" y="0.0" width="35" height="35"/>
+                                                        <rect key="frame" x="45" y="0.0" width="35" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="6eP-Ou-ITR"/>
@@ -255,8 +256,8 @@
                                     <constraint firstAttribute="height" constant="120" id="0HR-Ag-8is"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-Yi-IVj">
-                                <rect key="frame" x="37.5" y="212" width="300" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-Yi-IVj" customClass="MDStateButton" customModule="Mena_Test_Project" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="238" width="300" height="38"/>
                                 <color key="backgroundColor" red="0.19102048869999999" green="1" blue="0.86248034240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="VhD-ts-gkK"/>
@@ -265,12 +266,17 @@
                                 <state key="normal" title="Record Audio">
                                     <color key="titleColor" white="0.0" alpha="0.85064865249999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="record:" destination="rdD-wz-2Db" eventType="touchUpInside" id="hDV-Zh-Emg"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hym-It-rhb">
-                                <rect key="frame" x="0.0" y="312" width="375" height="355"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hym-It-rhb">
+                                <rect key="frame" x="0.0" y="308" width="375" height="359"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordingCell" rowHeight="80" id="PUp-lM-VeZ" customClass="RecordingCell" customModule="Mena_Test_Project" customModuleProvider="target">
@@ -297,7 +303,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAk-2N-Upn">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAk-2N-Upn" customClass="MDStateButton" customModule="Mena_Test_Project" customModuleProvider="target">
                                                     <rect key="frame" x="284" y="22.5" width="50" height="35"/>
                                                     <color key="backgroundColor" red="0.19102048869999999" green="1" blue="0.86248034240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -307,9 +313,11 @@
                                                     <state key="normal" title="Play">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="playTrigger" destination="PUp-lM-VeZ" eventType="touchUpInside" id="Qsd-Pw-kQU"/>
-                                                    </connections>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -319,6 +327,11 @@
                                                 <constraint firstItem="MAk-2N-Upn" firstAttribute="centerY" secondItem="jYc-fP-1Bg" secondAttribute="centerY" id="qOd-Xw-Now"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Gum-QO-9pC" id="bBj-kH-8lE"/>
+                                            <outlet property="nameLabel" destination="P3P-1R-bjK" id="MGn-G1-FmY"/>
+                                            <outlet property="playButton" destination="MAk-2N-Upn" id="scb-ic-D3T"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -327,12 +340,25 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5a-rh-orB" userLabel="Line View">
-                                <rect key="frame" x="3" y="278" width="369" height="4"/>
+                                <rect key="frame" x="3" y="299" width="369" height="4"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="DnR-Qp-Irq"/>
                                 </constraints>
                             </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="3AU-5l-dDv">
+                                <rect key="frame" x="37.5" y="198" width="94" height="29"/>
+                                <color key="tintColor" red="0.19102048869999999" green="1" blue="0.86248034240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="octaveChanged" destination="rdD-wz-2Db" eventType="valueChanged" id="ytp-yV-EFD"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR6-Z9-Ptp">
+                                <rect key="frame" x="323.5" y="199.5" width="14" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -340,12 +366,16 @@
                             <constraint firstAttribute="trailing" secondItem="K5a-rh-orB" secondAttribute="trailing" constant="3" id="23h-SS-Eb3"/>
                             <constraint firstItem="e5s-Gs-6Wi" firstAttribute="centerX" secondItem="Sk7-SM-vyN" secondAttribute="centerX" id="4o2-Jt-36E"/>
                             <constraint firstAttribute="trailing" secondItem="Hym-It-rhb" secondAttribute="trailing" id="5Uz-Lg-2Kh"/>
-                            <constraint firstItem="Hym-It-rhb" firstAttribute="top" secondItem="K5a-rh-orB" secondAttribute="bottom" constant="30" id="ARf-nF-GGY"/>
-                            <constraint firstItem="K5a-rh-orB" firstAttribute="top" secondItem="uxT-Yi-IVj" secondAttribute="bottom" constant="28" id="OPP-tZ-STD"/>
+                            <constraint firstItem="Hym-It-rhb" firstAttribute="top" secondItem="K5a-rh-orB" secondAttribute="bottom" constant="5" id="ARf-nF-GGY"/>
+                            <constraint firstItem="3AU-5l-dDv" firstAttribute="leading" secondItem="uxT-Yi-IVj" secondAttribute="leading" id="Miy-8t-BAw"/>
+                            <constraint firstItem="WR6-Z9-Ptp" firstAttribute="trailing" secondItem="uxT-Yi-IVj" secondAttribute="trailing" id="NEN-hD-jEj"/>
+                            <constraint firstItem="K5a-rh-orB" firstAttribute="top" secondItem="uxT-Yi-IVj" secondAttribute="bottom" constant="23" id="OPP-tZ-STD"/>
                             <constraint firstAttribute="bottom" secondItem="Hym-It-rhb" secondAttribute="bottom" id="aEV-D4-XFn"/>
+                            <constraint firstItem="WR6-Z9-Ptp" firstAttribute="centerY" secondItem="3AU-5l-dDv" secondAttribute="centerY" id="eMW-Uo-BIS"/>
                             <constraint firstItem="uxT-Yi-IVj" firstAttribute="width" secondItem="Sk7-SM-vyN" secondAttribute="width" multiplier="0.8" id="edE-SX-Kyo"/>
-                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="top" secondItem="e5s-Gs-6Wi" secondAttribute="bottom" constant="8" id="kcO-60-h7a"/>
+                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="top" secondItem="e5s-Gs-6Wi" secondAttribute="bottom" constant="34" id="kcO-60-h7a"/>
                             <constraint firstItem="K5a-rh-orB" firstAttribute="leading" secondItem="6T0-zs-0J4" secondAttribute="leading" constant="3" id="lJD-zv-HgD"/>
+                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="top" secondItem="3AU-5l-dDv" secondAttribute="bottom" constant="11" id="mIL-i5-R8k"/>
                             <constraint firstItem="e5s-Gs-6Wi" firstAttribute="top" secondItem="6T0-zs-0J4" secondAttribute="top" constant="20" id="seP-BO-EGA"/>
                             <constraint firstItem="Hym-It-rhb" firstAttribute="leading" secondItem="6T0-zs-0J4" secondAttribute="leading" id="yuE-uS-vvm"/>
                         </constraints>
@@ -353,7 +383,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Test Oscillator" id="ehK-pP-E7R"/>
                     <connections>
+                        <outlet property="octaveLabel" destination="WR6-Z9-Ptp" id="drM-F1-Za6"/>
                         <outlet property="recordButton" destination="uxT-Yi-IVj" id="9DD-Xa-1br"/>
+                        <outlet property="stepper" destination="3AU-5l-dDv" id="wAS-6P-HOQ"/>
                         <outlet property="tableView" destination="Hym-It-rhb" id="2So-Ce-wPs"/>
                         <outletCollection property="noteButtons" destination="VVE-r4-ON2" collectionClass="NSMutableArray" id="7E0-NS-dEj"/>
                         <outletCollection property="noteButtons" destination="ebc-qF-eCG" collectionClass="NSMutableArray" id="2N8-8b-El2"/>
