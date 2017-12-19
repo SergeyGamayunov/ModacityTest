@@ -10,8 +10,7 @@ import Foundation
 
 struct MDConstant {
 	static let semitone = 1.0594630943593 // 12-root of 2
-	static let a0 = 27.5 // first note in scale
-	static let c1 = 32.703195662575268
+	static let c1 = 32.703195662575268 // "do" first octave
 	
     static var dateFormatter: DateFormatter {
         let formatter = DateFormatter()

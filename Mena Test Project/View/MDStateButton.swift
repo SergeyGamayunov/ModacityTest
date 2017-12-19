@@ -12,7 +12,6 @@ class MDStateButton: UIButton {
     enum State {
         case active(String)
         case nonActive(String)
-        
     }
     
     var activeState: State! {

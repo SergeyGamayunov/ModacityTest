@@ -15,12 +15,11 @@ struct Recording {
     let fileName: String
 
 	static var all: [Recording] {
-        var result: [Recording] = []
-        
 		let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 		let directoryContents = try! FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
-		let cafFiles = directoryContents.filter{ $0.pathExtension == "caf" }
+		let cafFiles = directoryContents.filter { $0.pathExtension == "caf" }
         
+        var result: [Recording] = []
         for url in cafFiles {
             let properties = url.lastPathComponent.components(separatedBy: "@@@")
             let unixTime = Double(properties.first!)! as TimeInterval

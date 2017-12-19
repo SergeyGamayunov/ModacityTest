@@ -11,32 +11,35 @@ import AudioKit
 import AudioKitUI
 
 class OscillViewController: UIViewController {
+    // MARK:- AudioKit variables
     var source = AKVocalTract()
 	var mixer = AKMixer()
+    var recorder: AKNodeRecorder!
+    var player: AKAudioPlayer!
+    var tapeRecord: AKAudioFile!
+    var tapePlay: AKAudioFile!
+    
+    // MARK:- Data variables
     var octave = 4
+    var recordings: [Recording] {
+        return Recording.all.sorted { $0.date > $1.date }
+    }
 	
+    // MARK:- Outlets
 	@IBOutlet var noteButtons: [UIButton]!
 	@IBOutlet weak var recordButton: MDStateButton!
 	@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var octaveLabel: UILabel!
     
-	var recorder: AKNodeRecorder!
-	var player: AKAudioPlayer!
-	var tapeRecord: AKAudioFile!
-    var tapePlay: AKAudioFile!
-    
-	var recordings: [Recording] {
-        return Recording.all.sorted { $0.date > $1.date }
-	}
-	
-	
+    // MARK:- Life cycle of VC
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupUI()
 		setupSound()
     }
     
+    // MARK:- Setup UI and Sound
     func setupSound() {
         let tempMixer = AKMixer(source)
         tapeRecord = try! AKAudioFile()
@@ -61,6 +64,8 @@ class OscillViewController: UIViewController {
         recordButton.clipsToBounds = true
         octaveLabel.text = "\(octave)"
 	}
+    
+    // MARK:- IBActions
     @IBAction func octaveChanged() {
         octave = Int(stepper.value)
         octaveLabel.text = "\(octave)"
@@ -68,7 +73,6 @@ class OscillViewController: UIViewController {
     
 	@IBAction func play(sender: UIButton) {
 		let note = MDNote(rawValue: sender.tag)!
-		
 		source.frequency = note.getFrequency(for: octave)
 		source.start()
 	}
@@ -82,6 +86,7 @@ class OscillViewController: UIViewController {
         if recorder.isRecording {
             recordButton.activeState = .nonActive("Record Audio")
             recorder.stop()
+            
             let alert = UIAlertController(title: "Saving recording", message: "Give a name for your recording", preferredStyle: .alert)
             alert.addTextField(configurationHandler: nil)
             
@@ -100,7 +105,7 @@ class OscillViewController: UIViewController {
             alert.addAction(ok)
             alert.addAction(cancel)
             
-            self.present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         } else {
             recordButton.activeState = .active("Recording...")
             try! recorder.record()
@@ -109,6 +114,7 @@ class OscillViewController: UIViewController {
 	
     @objc func playRecord(sender: MDStateButton) {
         player.completionHandler = { sender.activeState = .nonActive("Play") }
+        
         if player.isPlaying {
             sender.activeState = .nonActive("Play")
 			player.stop()
@@ -145,4 +151,3 @@ extension OscillViewController: UITableViewDataSource, UITableViewDelegate {
 		return cell
 	}
 }
-
