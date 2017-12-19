@@ -42,13 +42,12 @@ class OscillViewController: UIViewController {
     // MARK:- Setup UI and Sound
     func setupSound() {
         let tempMixer = AKMixer(source)
-        tapeRecord = try! AKAudioFile()
+		
         tapePlay = try! AKAudioFile()
-        
         player = try! AKAudioPlayer(file: tapePlay)
         mixer = AKMixer(player, tempMixer)
-        recorder = try! AKNodeRecorder(node: mixer, file: tapeRecord)
-        
+		restartRecorder()
+
         AudioKit.output = mixer
         AudioKit.start()
     }
@@ -63,6 +62,11 @@ class OscillViewController: UIViewController {
         recordButton.layer.cornerRadius = 8.0
         recordButton.clipsToBounds = true
         octaveLabel.text = "\(octave)"
+	}
+	
+	private func restartRecorder() {
+		tapeRecord = try! AKAudioFile()
+		recorder = try! AKNodeRecorder(node: mixer, file: tapeRecord)
 	}
     
     // MARK:- IBActions
@@ -108,6 +112,7 @@ class OscillViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         } else {
             recordButton.activeState = .active("Recording...")
+			restartRecorder()
             try! recorder.record()
 		}
 	}
@@ -123,6 +128,7 @@ class OscillViewController: UIViewController {
             let fileName = recordings[sender.tag].fileName
             tapePlay = try! AKAudioFile(readFileName: fileName, baseDir: .documents)
             try! player.replace(file: tapePlay)
+			try! player.reloadFile()
             player.play()
         }
 	}
