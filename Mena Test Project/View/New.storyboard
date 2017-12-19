@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="liy-ES-YVQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Test Oscillator-->
+        <scene sceneID="K1b-L8-mKW">
+            <objects>
+                <viewController id="rdD-wz-2Db" customClass="OscillViewController" customModule="Mena_Test_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sk7-SM-vyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="e5s-Gs-6Wi">
+                                <rect key="frame" x="39" y="84" width="297" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-R5-pR2">
+                                        <rect key="frame" x="0.0" y="25" width="125" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="JGu-J2-x9D">
+                                                <rect key="frame" x="18.5" y="0.0" width="88" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-qF-eCG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="mPH-52-qVb"/>
+                                                            <constraint firstAttribute="height" constant="35" id="tsJ-lf-qHD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="C#">
+                                                            <color key="titleColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="yh7-J6-nRY"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="hHn-67-7d6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-Vu-ULe">
+                                                        <rect key="frame" x="53" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="6eP-Ou-ITR"/>
+                                                            <constraint firstAttribute="width" constant="35" id="Ij0-em-FuU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="D#">
+                                                            <color key="titleColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="Rc5-Le-lE9"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="pUo-x1-XTF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MHS-j2-D9q">
+                                                <rect key="frame" x="0.0" y="35" width="125" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVE-r4-ON2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="3SB-2J-G3m"/>
+                                                            <constraint firstAttribute="height" constant="35" id="cgL-cd-tDR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="pwX-3q-RMG"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="VKj-4E-KEF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSC-P1-wx3">
+                                                        <rect key="frame" x="45" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="8m4-JC-nTr"/>
+                                                            <constraint firstAttribute="width" constant="35" id="WMb-cB-aB4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="D">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="fLe-D5-7Pr"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="p5S-oP-e7p"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abf-zz-rng">
+                                                        <rect key="frame" x="90" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="Qyz-08-mdQ"/>
+                                                            <constraint firstAttribute="width" constant="35" id="qrd-eB-4ay"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="E">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="NLH-KS-u0L"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="TF5-30-Eu6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BgM-lE-KEk">
+                                        <rect key="frame" x="127" y="25" width="170" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rzF-OE-lrE">
+                                                <rect key="frame" x="22.5" y="0.0" width="125" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqL-YX-lMb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="5ca-jh-O4y"/>
+                                                            <constraint firstAttribute="height" constant="35" id="YP8-KL-Od6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="F#">
+                                                            <color key="titleColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="mun-Eh-S9G"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="D7r-2c-kVb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-nH-k92">
+                                                        <rect key="frame" x="45" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="n6Q-ww-zA2"/>
+                                                            <constraint firstAttribute="width" constant="35" id="yWv-t4-Ar0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="G#">
+                                                            <color key="titleColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="n6O-Uq-tNe"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="mak-gN-jee"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZI-tG-w9q">
+                                                        <rect key="frame" x="90" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="AbF-GY-veq"/>
+                                                            <constraint firstAttribute="width" constant="35" id="GMx-36-61H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="A#">
+                                                            <color key="titleColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="IHm-HD-qY3"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="y1T-ZZ-Je8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q9M-7w-LNV">
+                                                <rect key="frame" x="0.0" y="35" width="170" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCJ-Ah-fBu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="N3P-ql-YRB"/>
+                                                            <constraint firstAttribute="height" constant="35" id="NyY-Ul-x9D"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="X5b-RS-UJd"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="Cm3-RL-EBl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWR-Su-tOi">
+                                                        <rect key="frame" x="45" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="1Hs-lW-P64"/>
+                                                            <constraint firstAttribute="height" constant="35" id="iT1-Ch-Y9b"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="G">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="too-Jg-hd3"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="XOQ-rR-jRS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN0-No-pxL">
+                                                        <rect key="frame" x="90" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="7S1-QF-4rP"/>
+                                                            <constraint firstAttribute="height" constant="35" id="coy-UB-OpA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="A">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="NfL-4z-NBL"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="EMZ-CT-G2q"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dml-3C-0KD">
+                                                        <rect key="frame" x="135" y="0.0" width="35" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.95417622319999995" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="Dwy-UK-Vz8"/>
+                                                            <constraint firstAttribute="width" constant="35" id="ghi-ST-wNp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="B">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playWithSender:" destination="rdD-wz-2Db" eventType="touchDown" id="OVm-Nj-hZN"/>
+                                                            <action selector="stop" destination="rdD-wz-2Db" eventType="touchUpInside" id="Orq-BL-Wu0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0HR-Ag-8is"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-Yi-IVj">
+                                <rect key="frame" x="37.5" y="212" width="300" height="38"/>
+                                <color key="backgroundColor" red="0.19102048869999999" green="1" blue="0.86248034240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="VhD-ts-gkK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Record Audio">
+                                    <color key="titleColor" white="0.0" alpha="0.85064865249999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="record:" destination="rdD-wz-2Db" eventType="touchUpInside" id="hDV-Zh-Emg"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hym-It-rhb">
+                                <rect key="frame" x="0.0" y="312" width="375" height="355"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordingCell" rowHeight="80" id="PUp-lM-VeZ" customClass="RecordingCell" customModule="Mena_Test_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PUp-lM-VeZ" id="jYc-fP-1Bg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="HaA-DZ-H5P">
+                                                    <rect key="frame" x="30" y="15.5" width="132.5" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3P-1R-bjK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="132.5" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 December 1987" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gum-QO-9pC">
+                                                            <rect key="frame" x="0.0" y="29.5" width="132.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAk-2N-Upn">
+                                                    <rect key="frame" x="284" y="22.5" width="50" height="35"/>
+                                                    <color key="backgroundColor" red="0.19102048869999999" green="1" blue="0.86248034240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="SNv-Bu-lKq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <state key="normal" title="Play">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="playTrigger" destination="PUp-lM-VeZ" eventType="touchUpInside" id="Qsd-Pw-kQU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MAk-2N-Upn" secondAttribute="trailing" constant="26" id="Gin-oZ-O3c"/>
+                                                <constraint firstItem="HaA-DZ-H5P" firstAttribute="leading" secondItem="jYc-fP-1Bg" secondAttribute="leadingMargin" constant="15" id="KAa-lM-9n7"/>
+                                                <constraint firstItem="HaA-DZ-H5P" firstAttribute="centerY" secondItem="jYc-fP-1Bg" secondAttribute="centerY" id="KLA-cU-B4C"/>
+                                                <constraint firstItem="MAk-2N-Upn" firstAttribute="centerY" secondItem="jYc-fP-1Bg" secondAttribute="centerY" id="qOd-Xw-Now"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rdD-wz-2Db" id="oGV-V5-1Yk"/>
+                                    <outlet property="delegate" destination="rdD-wz-2Db" id="78I-cN-sPJ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5a-rh-orB" userLabel="Line View">
+                                <rect key="frame" x="3" y="278" width="369" height="4"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="DnR-Qp-Irq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="centerX" secondItem="Sk7-SM-vyN" secondAttribute="centerX" id="0oE-hn-2zM"/>
+                            <constraint firstAttribute="trailing" secondItem="K5a-rh-orB" secondAttribute="trailing" constant="3" id="23h-SS-Eb3"/>
+                            <constraint firstItem="e5s-Gs-6Wi" firstAttribute="centerX" secondItem="Sk7-SM-vyN" secondAttribute="centerX" id="4o2-Jt-36E"/>
+                            <constraint firstAttribute="trailing" secondItem="Hym-It-rhb" secondAttribute="trailing" id="5Uz-Lg-2Kh"/>
+                            <constraint firstItem="Hym-It-rhb" firstAttribute="top" secondItem="K5a-rh-orB" secondAttribute="bottom" constant="30" id="ARf-nF-GGY"/>
+                            <constraint firstItem="K5a-rh-orB" firstAttribute="top" secondItem="uxT-Yi-IVj" secondAttribute="bottom" constant="28" id="OPP-tZ-STD"/>
+                            <constraint firstAttribute="bottom" secondItem="Hym-It-rhb" secondAttribute="bottom" id="aEV-D4-XFn"/>
+                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="width" secondItem="Sk7-SM-vyN" secondAttribute="width" multiplier="0.8" id="edE-SX-Kyo"/>
+                            <constraint firstItem="uxT-Yi-IVj" firstAttribute="top" secondItem="e5s-Gs-6Wi" secondAttribute="bottom" constant="8" id="kcO-60-h7a"/>
+                            <constraint firstItem="K5a-rh-orB" firstAttribute="leading" secondItem="6T0-zs-0J4" secondAttribute="leading" constant="3" id="lJD-zv-HgD"/>
+                            <constraint firstItem="e5s-Gs-6Wi" firstAttribute="top" secondItem="6T0-zs-0J4" secondAttribute="top" constant="20" id="seP-BO-EGA"/>
+                            <constraint firstItem="Hym-It-rhb" firstAttribute="leading" secondItem="6T0-zs-0J4" secondAttribute="leading" id="yuE-uS-vvm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6T0-zs-0J4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Test Oscillator" id="ehK-pP-E7R"/>
+                    <connections>
+                        <outlet property="recordButton" destination="uxT-Yi-IVj" id="9DD-Xa-1br"/>
+                        <outlet property="tableView" destination="Hym-It-rhb" id="2So-Ce-wPs"/>
+                        <outletCollection property="noteButtons" destination="VVE-r4-ON2" collectionClass="NSMutableArray" id="7E0-NS-dEj"/>
+                        <outletCollection property="noteButtons" destination="ebc-qF-eCG" collectionClass="NSMutableArray" id="2N8-8b-El2"/>
+                        <outletCollection property="noteButtons" destination="nQG-Vu-ULe" collectionClass="NSMutableArray" id="e8o-nz-Vhn"/>
+                        <outletCollection property="noteButtons" destination="OSC-P1-wx3" collectionClass="NSMutableArray" id="bGV-TN-5yp"/>
+                        <outletCollection property="noteButtons" destination="abf-zz-rng" collectionClass="NSMutableArray" id="yud-JV-vk3"/>
+                        <outletCollection property="noteButtons" destination="tCJ-Ah-fBu" collectionClass="NSMutableArray" id="9vq-VX-2yF"/>
+                        <outletCollection property="noteButtons" destination="NWR-Su-tOi" collectionClass="NSMutableArray" id="POZ-rT-sef"/>
+                        <outletCollection property="noteButtons" destination="hqL-YX-lMb" collectionClass="NSMutableArray" id="Ruh-xB-JbP"/>
+                        <outletCollection property="noteButtons" destination="HN0-No-pxL" collectionClass="NSMutableArray" id="938-lh-j6o"/>
+                        <outletCollection property="noteButtons" destination="dml-3C-0KD" collectionClass="NSMutableArray" id="yxs-T9-C6V"/>
+                        <outletCollection property="noteButtons" destination="NZI-tG-w9q" collectionClass="NSMutableArray" id="ozG-A2-BxR"/>
+                        <outletCollection property="noteButtons" destination="vgo-nH-k92" collectionClass="NSMutableArray" id="4AR-IP-rkm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NI-Wf-d1Y" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464.80000000000001" y="-212.74362818590706"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L5Q-4q-tHY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="liy-ES-YVQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TfU-XV-ssd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rdD-wz-2Db" kind="relationship" relationship="rootViewController" id="dCI-e2-eea"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRp-bT-vgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="-213"/>
+        </scene>
+    </scenes>
+</document>

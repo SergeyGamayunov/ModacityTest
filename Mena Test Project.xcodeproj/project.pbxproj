@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		103A5BF61FE6093A002AE5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A5BF51FE6093A002AE5DE /* AppDelegate.swift */; };
-		103A5BF81FE6093A002AE5DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A5BF71FE6093A002AE5DE /* ViewController.swift */; };
-		103A5BFB1FE6093A002AE5DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103A5BF91FE6093A002AE5DE /* Main.storyboard */; };
+		103A5BF81FE6093A002AE5DE /* OscillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A5BF71FE6093A002AE5DE /* OscillViewController.swift */; };
 		103A5BFD1FE6093A002AE5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103A5BFC1FE6093A002AE5DE /* Assets.xcassets */; };
-		103A5C001FE6093A002AE5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103A5BFE1FE6093A002AE5DE /* LaunchScreen.storyboard */; };
+		A53E27EE1FE90EC000DCF17E /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53E27ED1FE90EC000DCF17E /* New.storyboard */; };
+		A53E27F11FE9138400DCF17E /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E27F01FE9138400DCF17E /* RecordingCell.swift */; };
+		A53E27F41FE913BE00DCF17E /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E27F31FE913BE00DCF17E /* Recording.swift */; };
+		A5A0881D1FE8F8930028F215 /* MDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0881C1FE8F8930028F215 /* MDConstant.swift */; };
+		A5A0881F1FE8F93C0028F215 /* MDNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0881E1FE8F93C0028F215 /* MDNote.swift */; };
+		FC9EA432D6721048FA89724D /* Pods_Mena_Test_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1E5B4B358C6F7764D74D0B /* Pods_Mena_Test_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		103A5BF21FE6093A002AE5DE /* Mena Test Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mena Test Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		103A5BF51FE6093A002AE5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		103A5BF71FE6093A002AE5DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		103A5BFA1FE6093A002AE5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		103A5BF71FE6093A002AE5DE /* OscillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscillViewController.swift; sourceTree = "<group>"; };
 		103A5BFC1FE6093A002AE5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		103A5BFF1FE6093A002AE5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		103A5C011FE6093A002AE5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F1E5B4B358C6F7764D74D0B /* Pods_Mena_Test_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mena_Test_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD9894507E9D0037D75E933 /* Pods-Mena Test Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mena Test Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mena Test Project/Pods-Mena Test Project.debug.xcconfig"; sourceTree = "<group>"; };
+		A28A0730812F5E3FE42BE40A /* Pods-Mena Test Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mena Test Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mena Test Project/Pods-Mena Test Project.release.xcconfig"; sourceTree = "<group>"; };
+		A53E27ED1FE90EC000DCF17E /* New.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = New.storyboard; sourceTree = "<group>"; };
+		A53E27F01FE9138400DCF17E /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		A53E27F31FE913BE00DCF17E /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		A5A0881C1FE8F8930028F215 /* MDConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDConstant.swift; sourceTree = "<group>"; };
+		A5A0881E1FE8F93C0028F215 /* MDNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9EA432D6721048FA89724D /* Pods_Mena_Test_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				103A5BF41FE6093A002AE5DE /* Mena Test Project */,
 				103A5BF31FE6093A002AE5DE /* Products */,
+				1667F565322FF8B45154A48C /* Pods */,
+				8E91195982CCE4DCFFC7964E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,66 @@
 		103A5BF41FE6093A002AE5DE /* Mena Test Project */ = {
 			isa = PBXGroup;
 			children = (
+				A53E27F61FE913E400DCF17E /* Helper */,
+				A53E27F51FE913DC00DCF17E /* Controller */,
+				A53E27F21FE913AF00DCF17E /* Model */,
+				A53E27EF1FE9136700DCF17E /* View */,
 				103A5BF51FE6093A002AE5DE /* AppDelegate.swift */,
-				103A5BF71FE6093A002AE5DE /* ViewController.swift */,
-				103A5BF91FE6093A002AE5DE /* Main.storyboard */,
 				103A5BFC1FE6093A002AE5DE /* Assets.xcassets */,
-				103A5BFE1FE6093A002AE5DE /* LaunchScreen.storyboard */,
 				103A5C011FE6093A002AE5DE /* Info.plist */,
 			);
 			path = "Mena Test Project";
+			sourceTree = "<group>";
+		};
+		1667F565322FF8B45154A48C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CD9894507E9D0037D75E933 /* Pods-Mena Test Project.debug.xcconfig */,
+				A28A0730812F5E3FE42BE40A /* Pods-Mena Test Project.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E91195982CCE4DCFFC7964E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F1E5B4B358C6F7764D74D0B /* Pods_Mena_Test_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A53E27EF1FE9136700DCF17E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A53E27ED1FE90EC000DCF17E /* New.storyboard */,
+				A53E27F01FE9138400DCF17E /* RecordingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A53E27F21FE913AF00DCF17E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0881E1FE8F93C0028F215 /* MDNote.swift */,
+				A53E27F31FE913BE00DCF17E /* Recording.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A53E27F51FE913DC00DCF17E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				103A5BF71FE6093A002AE5DE /* OscillViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A53E27F61FE913E400DCF17E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0881C1FE8F8930028F215 /* MDConstant.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 103A5C041FE6093A002AE5DE /* Build configuration list for PBXNativeTarget "Mena Test Project" */;
 			buildPhases = (
+				5F898A219EE9F5B297CDA8B3 /* [CP] Check Pods Manifest.lock */,
 				103A5BEE1FE6093A002AE5DE /* Sources */,
 				103A5BEF1FE6093A002AE5DE /* Frameworks */,
 				103A5BF01FE6093A002AE5DE /* Resources */,
+				1382D68B4D24C453E68EA6AD /* [CP] Embed Pods Frameworks */,
+				A5CDD64394CB3310CA6A57C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,44 +191,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103A5C001FE6093A002AE5DE /* LaunchScreen.storyboard in Resources */,
 				103A5BFD1FE6093A002AE5DE /* Assets.xcassets in Resources */,
-				103A5BFB1FE6093A002AE5DE /* Main.storyboard in Resources */,
+				A53E27EE1FE90EC000DCF17E /* New.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1382D68B4D24C453E68EA6AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mena Test Project/Pods-Mena Test Project-frameworks.sh",
+				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
+				"${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mena Test Project/Pods-Mena Test Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F898A219EE9F5B297CDA8B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mena Test Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5CDD64394CB3310CA6A57C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mena Test Project/Pods-Mena Test Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		103A5BEE1FE6093A002AE5DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103A5BF81FE6093A002AE5DE /* ViewController.swift in Sources */,
+				103A5BF81FE6093A002AE5DE /* OscillViewController.swift in Sources */,
+				A53E27F41FE913BE00DCF17E /* Recording.swift in Sources */,
+				A5A0881D1FE8F8930028F215 /* MDConstant.swift in Sources */,
+				A5A0881F1FE8F93C0028F215 /* MDNote.swift in Sources */,
+				A53E27F11FE9138400DCF17E /* RecordingCell.swift in Sources */,
 				103A5BF61FE6093A002AE5DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		103A5BF91FE6093A002AE5DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				103A5BFA1FE6093A002AE5DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		103A5BFE1FE6093A002AE5DE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				103A5BFF1FE6093A002AE5DE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		103A5C021FE6093A002AE5DE /* Debug */ = {
@@ -272,6 +380,7 @@
 		};
 		103A5C051FE6093A002AE5DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD9894507E9D0037D75E933 /* Pods-Mena Test Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +396,7 @@
 		};
 		103A5C061FE6093A002AE5DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28A0730812F5E3FE42BE40A /* Pods-Mena Test Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
